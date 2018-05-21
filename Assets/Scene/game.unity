@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.9828542, g: 0.5215464, b: 0.3429972, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -156,6 +156,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -207,6 +212,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -258,6 +268,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -310,6 +325,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -361,6 +377,7 @@ GameObject:
   - component: {fileID: 439004175}
   - component: {fileID: 439004174}
   - component: {fileID: 439004173}
+  - component: {fileID: 439004177}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -444,6 +461,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &439004177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439004172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77034d937108e4bc28f9c1ac1fd75dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &471007640
 Prefab:
   m_ObjectHideFlags: 0
@@ -483,6 +511,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -529,6 +562,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -580,6 +618,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -619,6 +662,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec9f86fe4e9964e46ae8a7a1039918a1, type: 2}
   m_StaticBatchInfo:
@@ -717,6 +761,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -768,6 +817,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -1026,7 +1080,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187799612}
   m_LocalRotation: {x: 0.26022053, y: -0, z: -0, w: 0.9655493}
-  m_LocalPosition: {x: 0.01, y: 5, z: -6.5}
+  m_LocalPosition: {x: -0.11, y: 5, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1091,6 +1145,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -1142,6 +1201,11 @@ Prefab:
       propertyPath: m_Name
       value: Pickup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114291237250085962, guid: 217357d2e714973409b7a4d39b0f1075,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1444368500}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217357d2e714973409b7a4d39b0f1075, type: 2}
   m_IsPrefabParent: 0
@@ -1150,6 +1214,50 @@ Transform:
   m_PrefabParentObject: {fileID: 4798773575686678, guid: 217357d2e714973409b7a4d39b0f1075,
     type: 2}
   m_PrefabInternal: {fileID: 1260759766}
+--- !u!1 &1355537198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1355537200}
+  - component: {fileID: 1355537201}
+  m_Layer: 0
+  m_Name: StuffReceiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355537200
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355537198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6758952, y: 1.1846352, z: -1.3574581}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355537201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355537198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37990251d6b214dbaae34037183fa391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostname: mqtt.example.com
+  port: 1883
+  topic: sensors/accelerometer
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1 &1444368500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1291,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 6f7b4c938af16fd4dab745f213c333c2, type: 2}
   m_StaticBatchInfo:
@@ -1311,6 +1420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793620767}
   - component: {fileID: 1793620766}
+  - component: {fileID: 1793620768}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1361,12 +1471,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1793620765}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 6.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1793620768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793620765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4423f9bbfce7404d80021bf2ef09c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 0, z: 0}
+  player: {fileID: 1444368500}
 --- !u!1 &2005330426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1534,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -1495,6 +1619,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -1579,6 +1704,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
