@@ -7,6 +7,14 @@ public class BallController : MonoBehaviour
 {
     public Text pointsText;
     public float speed;
+    public MQTTClient mqtt;
+
+    private Matrix4x4 mqttToWorldCoordinates = new Matrix4x4(
+        new Vector4(0,     0,     -1.0f,  0),
+        new Vector4(1.0f,  0,     0,     0),
+        new Vector4(0,     0,     0,     0),
+        new Vector4(0,     0,     0,     0)
+    );
 
     private int points = 0;
     private Rigidbody rigidbody;
@@ -24,6 +32,8 @@ public class BallController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
 
         Vector3 movement = new Vector3(horizontal, 0, vertical);
+        Vector3 mqttMovement = mqttToWorldCoordinates.MultiplyVector(mqtt.direction);
+        rigidbody.AddForce(mqttMovement);
         rigidbody.AddForce(movement * speed);
     }
 

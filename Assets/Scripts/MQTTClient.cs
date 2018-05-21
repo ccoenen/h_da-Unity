@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 using uPLibrary.Networking.M2Mqtt;
@@ -25,11 +26,10 @@ public class MQTTClient : MonoBehaviour {
 
 	void client_MqttReceived(object sender, MqttMsgPublishEventArgs e) {
 		string msg = Encoding.UTF8.GetString(e.Message);
-		Debug.Log(string.Format("Received ({0}): {1}", e.Topic, msg));
 		string[] bits = msg.Split(',');
-		direction.x = float.Parse(bits[0]);
-		direction.y = float.Parse(bits[1]);
-		direction.z = float.Parse(bits[2]);
+		direction.x = float.Parse(bits[0], CultureInfo.InvariantCulture);
+		direction.y = float.Parse(bits[1], CultureInfo.InvariantCulture);
+		direction.z = float.Parse(bits[2], CultureInfo.InvariantCulture);
 	}
 
 	// Update is called once per frame
