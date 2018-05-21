@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsText: {fileID: 860901891}
   speed: 5
+  mqtt: {fileID: 1355537201}
 --- !u!1 &1655495141
 GameObject:
   m_ObjectHideFlags: 0
