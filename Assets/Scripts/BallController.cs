@@ -17,7 +17,7 @@ public class BallController : MonoBehaviour
     );
 
     private int points = 0;
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
 
     // Use this for initialization
     void Start()
