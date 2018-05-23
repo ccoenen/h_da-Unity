@@ -130,7 +130,7 @@ public class LidarReceiver : MonoBehaviour {
 		}
 
 		int index = receivingBuffer[1] - 0xA0;
-		if (index < 0 || index > 90) {
+		if (index < 0 || index >= 90) {
 			receivingBuffer.RemoveAt(0);
 			discardedBytes++;
 			Profiler.EndSample();
@@ -160,7 +160,8 @@ public class LidarReceiver : MonoBehaviour {
 		Profiler.BeginSample("cc-receive");
 		int b;
 		int counter = 0;
-		while (((b = inputProcess.StandardOutput.BaseStream.ReadByte()) != -1) && (++counter < 220)) {
+
+		while (((b = inputProcess.StandardOutput.BaseStream.ReadByte()) != -1) && (++counter < 300)) {
 			readBytes++;
 			string text = string.Format("{0:x2}", b);
 			byte currentByte = System.Convert.ToByte(b);
